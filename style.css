@@ -1,0 +1,103 @@
+.rectangle {
+  fill: pink;
+  stroke: yellow;
+}
+
+.orange {
+  fill: orange;
+  stroke: rgb(230, 151, 49);
+}
+
+.blue {
+  fill: blue;
+  stroke: rgb(0, 195, 255);
+}
+
+.yellow {
+  animation: yellow_kf infinite 1s ease-in;
+}
+
+@keyframes yellow_kf {
+  0% {
+    stroke: yellow;
+    fill: rgb(253, 235, 68);
+  }
+  100% {
+    stroke: blue;
+    fill: greenyellow;
+  }
+}
+
+.move {
+  animation: move_kf infinite 1s ease-out;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes move_kf {
+  0% {
+    stroke-width: 1vw;
+    x: 60px;
+  }
+  100% {
+    stroke-width: 10vw;
+    x: 160px;
+  }
+}
+
+.star {
+  animation: star_kf infinite 3s ease-in;
+}
+
+@keyframes star_kf {
+  0% {
+    transform: rotate(0);
+    stroke-width: 0vw;
+  }
+  100% {
+    transform: rotate(360deg);
+    stroke-width: 10vw;
+  }
+}
+
+.ellipse {
+  animation: ellipse_kf infinite 2s ease-in-out alternate-reverse;
+}
+
+@keyframes ellipse_kf {
+  0% {
+    transform: rotate(0);
+    cx: 75px;
+    cy: 75px;
+    rx: 20px;
+    ry: 5px;
+  }
+  100% {
+    transform: rotate(10deg);
+    cx: 25vw;
+    cy: 38vw;
+    rx: 50px;
+    ry: 50px;
+  }
+}
+
+.path1 {
+  stroke-dasharray: 100;
+  animation: dash 5s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.path2 {
+  stroke-dasharray: 500;
+  animation: dash2 2s linear infinite;
+}
+
+@keyframes dash2 {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}

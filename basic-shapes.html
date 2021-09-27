@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Exercises</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,16 +14,17 @@
     <!-- <rect x="10" y="10"  width="30" height="30" stroke="black"/> -->
 
 
-    <svg width="500" height="500" >
+    <svg width="600" height="500" >
+       
 
         <!-- RECTANGLE -->
         <!-- The <rect> element draws a rectangle on the screen. 
             There are 6 basic attributes that control the position and shape of the rectangles on screen. 
             The one on the right has its rx and ry parameters set, giving it rounded corners. 
             If they're not set, they default to 0.-->
-        <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-        <rect x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5"/>
-
+            <rect class="rectangle" x="10" y="10" width="30" height="30" stroke="black"  stroke-width="5"/>
+            <rect class="rectangle move"  x="60" y="10" rx="10" ry="10" width="30" height="30" stroke="black"  stroke-width="5"/>
+       
         <!-- x  
             The x position of the top left corner of the rectangle. -->
 
@@ -45,8 +47,9 @@
         <!-- CIRCLE -->
         <!-- The <circle> element draws a circle on the screen. 
             It takes 3 basic parameters to determine the shape and size of the element. -->
-        <circle cx="25" cy="75" r="20" stroke="red" fill="transparent" stroke-width="5"/>
-
+        <g fill="yellow">
+            <circle  class="orange" cx="25" cy="75" r="20"  stroke-width="5"/>
+        </g>
         <!-- r
             The radius of the circle. -->
 
@@ -61,7 +64,7 @@
         <!-- An <ellipse> is a more general form of the <circle> element, 
             where you can scale the x and y radius 
             (commonly referred to as the semimajor and semiminor axes in maths) of the circle separately. -->
-        <ellipse cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
+        <ellipse class ="ellipse" cx="75" cy="75" rx="20" ry="5" stroke="red" fill="transparent" stroke-width="5"/>
 
         <!-- rx
             The x radius of the ellipse. -->
@@ -80,7 +83,7 @@
         <!-- LINE -->
         <!-- The <line> element takes the positions of two points as parameters 
             and draws a straight line between them. -->
-        <line x1="10" x2="50" y1="110" y2="150" stroke="orange" stroke-width="5"/>
+        <line class="orange" x1="10" x2="50" y1="110" y2="150"  stroke-width="5"/>
         
         <!-- x1
             The x position of point 1. -->
@@ -117,10 +120,8 @@
             in that it is composed of straight line segments connecting a list of points. 
             For polygons though, the path automatically connects the last point with the first, 
             creating a closed shape. -->
-        <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
-            stroke="green" fill="transparent" stroke-width="5"/>
-        <polygon points="225, 100 300, 190 260, 300 200, 300 150, 200"
-            stroke="yellow" fill="transparent" stroke-width="12"/>
+        <polygon  class="blue star" points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180" stroke-width="5"/>
+        <polygon class="yellow" points="225, 100 300, 190 260, 300 200, 300 150, 200" stroke-width="12"/>
 
         <!--points
             A list of points, each number separated by a space, comma, EOL, or a line feed character. 
@@ -134,8 +135,8 @@
             Using a path element, you can draw rectangles (with or without rounded corners), 
             circles, ellipses, polylines, and polygons. 
             Basically any of the other types of shapes, bezier curves, quadratic curves, and many more. -->
-        <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
-        <path d="M10,300 Q40,400 50,300 T250,400 T100, 300" fill="none" stroke="orange" stroke-width="5"/>
+        <path class="path1" d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5"/>
+        <path class="path2" d="M10,300 Q40,400 50,300 T250,400 T100, 300" fill="none" stroke="lime" stroke-width="5"/>
         <path d="M225, 100 L300, 190 L260, 300 L200, 300 L150, 200 L225, 100" fill="none" stroke="black" stroke-width="5"/>
         <path d="M225, 100 Q300, 190 260, 300 C200, 300 150, 200 225, 100" fill="none" stroke="blue" stroke-width="5"/>
 
@@ -162,8 +163,9 @@
             means that the coordinates are relative (to the last position of the pen) -->
 
 
-
+      
       </svg>
+
     
 </body>
 </html>
